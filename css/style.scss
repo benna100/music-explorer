@@ -1,0 +1,106 @@
+---
+---
+
+@mixin render-tag {
+    float: left;
+    margin-right: 10px;
+    background-color: #f0bcbc;
+    color: black;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+html{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 2em;
+    }
+}
+
+
+section.intro {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+section.playlists {
+    display: flex;
+    justify-content: center;
+
+    ul li.playlist {
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 20px;
+        max-width: 300px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        .description {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+
+        ul.tags {
+            overflow: auto;
+            margin-bottom: 40px;
+
+            li {
+                @include render-tag;
+            }
+        }
+
+        a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            margin: 0 auto;
+            background-color: black;
+            color: white;
+            border-radius: 4px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+    }
+}
+
+
+
+main.playlist {
+    padding: 0 12px;
+
+    display: flex;
+    justify-content: center;
+
+    h1.description {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    ul.tags {
+        overflow: auto;
+        margin-bottom: 20px;
+
+        li {
+            @include render-tag;
+        }
+    }
+
+}
