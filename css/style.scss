@@ -94,6 +94,11 @@ main.playlist {
         margin-bottom: 20px;
     }
 
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
     ul.tags {
         overflow: auto;
         margin-bottom: 20px;
@@ -101,6 +106,10 @@ main.playlist {
         li {
             @include render-tag;
         }
+    }
+    iframe {
+        box-sizing: border-box;
+        height: 380px;
     }
 
 }
